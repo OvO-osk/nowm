@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: nowm
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/info
+    envVars:
+      - key: NOWM_KEY
+        sync: false   # 部署时 Render 会让你填：这就是网页的登录密码
